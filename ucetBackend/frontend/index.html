@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University College of Engineering and Technology</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+
+  <!-- Navbar -->
+  <header class="bg-white dark:bg-gray-800 shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
+      <a href="#home" class="flex items-center space-x-3">
+        <img src="logo.png" alt="UCET Logo" class="h-10 w-10">
+        <span class="text-xl font-bold text-blue-900 dark:text-white">UCET</span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex space-x-6 font-medium items-center">
+        <a href="#home" class="hover:text-blue-600">Home</a>
+        <a href="#about" class="hover:text-blue-600">About</a>
+
+        <!-- Departments Dropdown -->
+        <div class="relative group">
+          <button class="dropdown-btn hover:text-blue-600 focus:outline-none">Departments ▾</button>
+          <div class="absolute left-0 mt-2 w-56 bg-white dark:bg-gray-800 shadow-lg rounded hidden group-hover:block">
+            <a href="#departments" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Computer Science</a>
+            <a href="#departments" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Electrical Engineering</a>
+            <a href="#departments" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Mechanical Engineering</a>
+            <a href="#departments" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Information Technology</a>
+            <a href="#departments" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">AI & ML</a>
+          </div>
+        </div>
+
+        <!-- Resources Dropdown -->
+        <div class="relative group">
+          <button class="dropdown-btn hover:text-blue-600 focus:outline-none">Resources ▾</button>
+          <div class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 shadow-lg rounded hidden group-hover:block">
+            <a href="#resources" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Library</a>
+            <a href="#resources" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Labs</a>
+            <a href="https://nptel.ac.in" target="_blank" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">NPTEL/SWAYAM</a>
+          </div>
+        </div>
+
+        <a href="login.html" class="hover:text-blue-600">Login</a>
+        <button id="theme-toggle" class="px-3 py-1 rounded bg-gray-200 dark:bg-gray-700">🌙</button>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden flex items-center">
+        <button id="menu-toggle" class="focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-6 pb-6">
+      <a href="#home" class="block py-2">Home</a>
+      <a href="#about" class="block py-2">About</a>
+
+      <!-- Departments -->
+      <details class="py-2">
+        <summary class="cursor-pointer">Departments</summary>
+        <a href="#departments" class="block pl-4 py-1">Computer Science</a>
+        <a href="#departments" class="block pl-4 py-1">Electrical Engineering</a>
+        <a href="#departments" class="block pl-4 py-1">Mechanical Engineering</a>
+        <a href="#departments" class="block pl-4 py-1">Information Technology</a>
+        <a href="#departments" class="block pl-4 py-1">AI & ML</a>
+      </details>
+
+      <!-- Resources -->
+      <details class="py-2">
+        <summary class="cursor-pointer">Resources</summary>
+        <a href="#resources" class="block pl-4 py-1">Library</a>
+        <a href="#resources" class="block pl-4 py-1">Labs</a>
+        <a href="https://nptel.ac.in" target="_blank" class="block pl-4 py-1">NPTEL/SWAYAM</a>
+      </details>
+
+      <a href="login.html" class="block py-2">Login</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative h-[400px] flex items-center justify-center bg-cover bg-center" style="background-image: url('college-banner.jpg');">
+    <div class="bg-black bg-opacity-50 p-6 rounded text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-white">
+        University College of Engineering and Technology
+      </h1>
+      <p class="mt-2 text-lg text-gray-200">Founded in 2009</p>
+    </div>
+  </section>
+
+  <!-- News Section -->
+  <section id="news" class="py-16 bg-gray-100 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Latest News</h2>
+      <div class="grid gap-8 md:grid-cols-3">
+
+        <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Mid-term Exams 2025</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-2">Exam schedules for all departments have been released. Please check your emails for details.</p>
+          <span class="text-sm text-gray-500 dark:text-gray-400">Sep 10, 2025</span>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">AI & ML Workshop</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-2">A 3-day workshop on Artificial Intelligence & Machine Learning will be conducted by industry experts.</p>
+          <span class="text-sm text-gray-500 dark:text-gray-400">Sep 5, 2025</span>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Alumni Meet 2025</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-2">Join us for the annual alumni meet to reconnect and network with our esteemed alumni community.</p>
+          <span class="text-sm text-gray-500 dark:text-gray-400">Aug 28, 2025</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">About UCET</h2>
+      <p class="text-lg leading-relaxed">
+        UCET is a premier engineering college founded in 2009. We focus on innovation, research, and excellence in technical education.
+      </p>
+    </div>
+  </section>
+
+  <!-- Departments Section -->
+  <section id="departments" class="py-16 bg-gray-100 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Departments</h2>
+      <div class="grid gap-8 md:grid-cols-3">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">Computer Science</h3>
+          <p>Cutting-edge curriculum in AI, ML, Cybersecurity, and Full Stack Development.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">Electrical Engineering</h3>
+          <p>Strong foundation in power systems, robotics, and embedded systems.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">Mechanical Engineering</h3>
+          <p>Innovative design, manufacturing, and sustainable energy solutions.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">Information Technology</h3>
+          <p>Specialization in networks, cloud computing, and software engineering.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">AI & ML</h3>
+          <p>Advanced studies in artificial intelligence, machine learning, and data analytics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources Section -->
+  <section id="resources" class="py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Resources</h2>
+      <div class="grid gap-8 md:grid-cols-3 text-center">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">Library</h3>
+          <p>Access to thousands of books, journals, and e-resources.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">Labs</h3>
+          <p>State-of-the-art laboratories for research and development.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">NPTEL/SWAYAM</h3>
+          <p>Online learning and certification from premier institutions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- News Section -->
+  <section id="news" class="p-6">
+    <h2 class="text-2xl font-bold mb-4 text-blue-900">Latest News</h2>
+    <div id="newsContainer" class="space-y-4">
+      <!-- Dynamic news will load here -->
+    </div>
+  </section>
+
+  <!-- Resources Section -->
+  <section id="resources" class="p-6 bg-gray-50">
+    <h2 class="text-2xl font-bold mb-4 text-blue-900">Resources</h2>
+    <div id="resourcesContainer" class="space-y-4">
+      <!-- Dynamic resources will load here -->
+    </div>
+  </section>
+
+<!-- Resources Section -->
+<section id="resources" class="py-12">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-6 text-center">Resources</h2>
+    <div id="resources-section"></div>
+  </div>
+</section>
+
+
+
+
+
+  <!-- Alumni Section -->
+  <section id="alumni" class="py-16 bg-gray-100 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">Alumni</h2>
+      <p class="text-lg leading-relaxed mb-6">
+        Our alumni are working across the globe in leading organizations and research institutions.
+      </p>
+      <a href="login.html" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Alumni Login</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-6 text-center">
+    <p>&copy; 2025 University College of Engineering and Technology. All rights reserved.</p>
+  </footer>
+  <script defer src="script.js"></script>
+
+</body>
+</html>
